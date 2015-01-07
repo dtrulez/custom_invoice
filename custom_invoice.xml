@@ -7,7 +7,7 @@
       <field name="inherit_id" ref="account.invoice_form" />
       <field name="arch" type="xml">
         <xpath expr="/form/sheet/group/group[2]/field[@name='account_id']" position="after">
-          <field domain="[('type','=','sale')]" name="pricelist_id" groups="product.group_sale_pricelist" on_change="onchange_pricelist_id(pricelist_id,invoice_line)"/>
+          <field domain="[('type','=','sale')]" name="pricelist_id" on_change="onchange_pricelist_id(pricelist_id,invoice_line)"/>
           <!--field name="pricelist_id" /-->
           <field name="currency_id" invisible="1"/>
         </xpath>
