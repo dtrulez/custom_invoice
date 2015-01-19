@@ -1,0 +1,3 @@
+id,report_ids/id,margin_bottom,header_line,header_spacing,margin_left,name,orientation,dpi,page_height,page_width,format,margin_right,margin_top
+test_format,account.account_invoices,20,False,35,7,test format,Portrait,90,200,100,Custom,7,40
+,sale.report_sale_order,,,,,,,,,,,,
