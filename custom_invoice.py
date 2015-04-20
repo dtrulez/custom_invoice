@@ -94,9 +94,10 @@ class account_journal(models.Model):
     def write(self, cr, uid, ids, vals, context=None):
 	res = super(account_journal, self).write(cr, uid, ids, vals, context=context)
 
-	prefix = vals['code'].upper()
-	seq = {'prefix': prefix + "/%(year)s/"}
-	seq_obj = self.browse(cr, uid, ids, context).sequence_id
-	seq_obj.update(seq)
+	if 'code' in vals:
+	    prefix = vals['code'].upper()
+	    seq = {'prefix': prefix + "/%(year)s/"}
+	    seq_obj = self.browse(cr, uid, ids, context).sequence_id
+	    seq_obj.update(seq)
 
 	return res
